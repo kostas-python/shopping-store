@@ -4,7 +4,6 @@ import { DecimalPipe } from '@angular/common';
 
 
 
-
 @Component({
   selector: 'app-top-bar',
   standalone: true,
