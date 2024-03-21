@@ -1,14 +1,24 @@
-import { Component } from '@angular/core';
-import { DealsComponent } from './component/deals/deals.component';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HomeComponent } from '../home.component';
 
 
-@Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [DealsComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
-})
-export class HomeComponent {
 
-}
+describe('HomeComponent', () => {
+  let component: HomeComponent;
+  let fixture: ComponentFixture<HomeComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [HomeComponent]
+    })
+    .compileComponents();
+    
+    fixture = TestBed.createComponent(HomeComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
