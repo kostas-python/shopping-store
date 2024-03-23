@@ -17,7 +17,7 @@
         <span class="remove" (click)="onRemoveItem()">Remove</span>
          <app-quantity-stepper
          [quantity]="item.quantity"
-         (quantityChange)="onQuantityChange">          
+         (quantityChange)="onQuantityChange($event)">          
          </app-quantity-stepper>
       </section>
     </div>
