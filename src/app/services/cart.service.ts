@@ -1,10 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-
+  cart = signal<Cart>({
+    items: [],
+    count: 0,
+    total: 0,
+  });
+  
   constructor() { }
 }
 
