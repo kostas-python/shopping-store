@@ -12,7 +12,7 @@ import { Product } from '../../../../data/products.data';
 
 export class ProductCardComponent {
   @Input() product!: Product;
-  @Output() add= new EventEmitter<Product>();
+  @Output() add = new EventEmitter<Product>();
 
 
   onAdd() {
