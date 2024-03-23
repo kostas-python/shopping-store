@@ -48,6 +48,21 @@ export class CartService {
     return newCart;
   });
  }
+
+ decreaseItem(item: CartItem) {
+  this.cart.update((prevCart) => {
+    const newCart = {
+      ...prevCart,
+      items: [...prevCart.items],
+    };
+    const itemObj = newCart.items.find((t) => t.id === item.id);
+    itemObj!.quantity = itemObj!.quantity -1;
+    newCart.count--;
+    newCart.total -= itemObj!.price;
+    return newCart;
+  });
+ }
+
 }
 
 
