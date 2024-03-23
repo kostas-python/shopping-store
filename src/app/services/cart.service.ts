@@ -19,7 +19,10 @@ export class CartService {
   addItem(item: CartItem) {
     const itemObj = this.cart().items.find((t) => t.id ===item.id);
     if (itemObj) {
-      // increase item
+
+      // increase item method
+
+      this.increaseItem(itemObj);
 
     } else {
       this.cart.update((prevCart) => ({
@@ -30,6 +33,20 @@ export class CartService {
     
     }));
   }
+ }
+
+ increaseItem(item: CartItem) {
+  this.cart.update((prevCart) => {
+    const newCart = {
+      ...prevCart,
+      items: [...prevCart.items],
+    };
+    const itemObj = newCart.items.find((t) => t.id === item.id);
+    itemObj!.quantity = itemObj!.quantity +1;
+    newCart.count++;
+    newCart.total += itemObj!.price;
+    return newCart;
+  });
  }
 }
 
