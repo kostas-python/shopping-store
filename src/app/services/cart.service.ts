@@ -63,6 +63,19 @@ export class CartService {
   });
  }
 
+ removeItem(item: CartItem) {
+  this.cart.update((prevCart) => {
+    const newCart = {
+      ...prevCart,
+      items: [...prevCart.items.filter((t) => t.id === item.id)],
+    };
+    const itemObj = prevCart.items.find((t) => t.id === item.id);
+    newCart.count -= itemObj!.quantity;
+    newCart.total -= itemObj!.price * itemObj!.quantity;
+    return newCart;
+  });
+ }
+
 }
 
 
