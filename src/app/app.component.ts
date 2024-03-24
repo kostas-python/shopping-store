@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent } from './layout/footer/footer.component';
 
 
-
+// import home page components  //
 
 @Component({
   selector: 'app-root',
@@ -14,6 +14,8 @@ import { FooterComponent } from './layout/footer/footer.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
+
 export class AppComponent {
   title = 'shopping-store';
 }

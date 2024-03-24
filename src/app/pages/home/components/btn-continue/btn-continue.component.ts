@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
+// add routerlink //
+
 @Component({
   selector: 'app-btn-continue',
   standalone: true,

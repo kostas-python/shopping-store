@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { BtnContinueComponent } from '../home/components/btn-continue/btn-continue.component';
 
 
+// import BtnContinueComponent  //
+
 
 @Component({
   selector: 'app-success',

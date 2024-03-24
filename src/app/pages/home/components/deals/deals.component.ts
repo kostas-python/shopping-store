@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-deals',
   standalone: true,
@@ -7,6 +9,8 @@ import { Component } from '@angular/core';
   templateUrl: './deals.component.html',
   styleUrl: './deals.component.css'
 })
+
+
 export class DealsComponent {
 
 }

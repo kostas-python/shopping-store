@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { DealsComponent } from './components/deals/deals.component';
 import { ProductsComponent } from './products/products.component';
 
+
+// import deals and products component //
+
 @Component({
   selector: 'app-home',
   standalone: true,

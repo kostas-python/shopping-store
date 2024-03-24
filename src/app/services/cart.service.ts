@@ -16,11 +16,12 @@ export class CartService {
   
   constructor() { }
 
+  // add item method //
+
   addItem(item: CartItem) {
     const itemObj = this.cart().items.find((t) => t.id ===item.id);
     if (itemObj) {
 
-      // increase item method
 
       this.increaseItem(itemObj);
 
@@ -34,6 +35,8 @@ export class CartService {
     }));
   }
  }
+
+    // increase item method //
 
  increaseItem(item: CartItem) {
   this.cart.update((prevCart) => {
@@ -49,6 +52,8 @@ export class CartService {
   });
  }
 
+   // decrease item method //
+
  decreaseItem(item: CartItem) {
   this.cart.update((prevCart) => {
     const newCart = {
@@ -62,6 +67,8 @@ export class CartService {
     return newCart;
   });
  }
+
+   // remove item method //
 
  removeItem(item: CartItem) {
   this.cart.update((prevCart) => {

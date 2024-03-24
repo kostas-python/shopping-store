@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-quantity-stepper',
   standalone: true,
@@ -7,6 +9,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   templateUrl: './quantity-stepper.component.html',
   styleUrl: './quantity-stepper.component.css',
 })
+
+
+
 export class QuantityStepperComponent {
   @Input() quantity: number = 1;
   @Output() quantityChange = new EventEmitter<number>();
