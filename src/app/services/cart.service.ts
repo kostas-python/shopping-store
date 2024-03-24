@@ -67,7 +67,7 @@ export class CartService {
   this.cart.update((prevCart) => {
     const newCart = {
       ...prevCart,
-      items: [...prevCart.items.filter((t) => t.id === item.id)],
+      items: [...prevCart.items.filter((t) => t.id !== item.id)],
     };
     const itemObj = prevCart.items.find((t) => t.id === item.id);
     newCart.count -= itemObj!.quantity;
